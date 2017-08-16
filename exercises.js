@@ -6,6 +6,14 @@
  * ie: "cat" => "tac"
  */
 
+function firstReverse(str){
+	if (typeof str !== "string"){
+		return null;
+	}else{
+		return str.split("").reverse().join("");
+		}
+ }
+
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
  * return the string in alphabetical order
@@ -14,6 +22,13 @@
  * ie: "cake" => "acek"
  */
 
+function alphaOrder(str){
+	if (typeof str !=="string"){
+		return null;
+	}else{
+		return str.split("").sort().join("");
+	}
+}
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
  * return the number of vowels in the string
@@ -21,6 +36,35 @@
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+
+/* function vowelCount(str){
+ 	var vowels = "aeiouAEIOU";
+ 	var count = 0;
+ 	if (typeof str !=="string"){
+ 		return null;
+ 	}else{
+ 		for (var i=0; i<str.length; i++){
+ 			if (vowels.indexOf(str[i]) !== -1){
+ 				count ++;
+ 			}
+ 		}return count;
+ 	}
+ }*/
+
+
+function vowelCount(str){
+	if (typeof str !== "string"){
+		return null;
+	}else{
+		var vowels = "aeiouAEIOU";
+		var count = 0;
+		for (var i=0; i<str.length ; i++){
+			if(vowels.indexOf(str[i]) !== -1){
+				count ++;
+			}
+		}return count;
+	}
+}
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -56,9 +100,9 @@
  */
 
 module.exports = {
-    firstReverse: null,
-    alphaOrder: null,
-    vowelCount: null,
+    firstReverse: firstReverse,
+    alphaOrder: alphaOrder,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
