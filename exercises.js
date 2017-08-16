@@ -90,10 +90,10 @@ function timeConvert(num1){
 }*/
 
 function repeatString (str, times){
-	if (typeof str !== "string" && typeof times !== "number"){
+	if (typeof str !== "string" && typeof times !== -"number"){
 		return null;
 	}else{
-		return str.repeat(times)
+		return str.repeat(times);
 	}
 }
 
